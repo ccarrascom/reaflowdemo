@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
 import {FC, useState, useCallback} from 'react';
 import {Checkbox, Space} from 'antd';
 import {Diagram} from './Diagram';

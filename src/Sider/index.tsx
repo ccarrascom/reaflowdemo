@@ -8,8 +8,8 @@ import {NodeList} from './NodeList';
 export interface SidebarProps {
   show: boolean;
   selection: Entries | null;
-  onClose?(): void;
-  onNodeSelect?(
+  onClose(): void;
+  onNodeSelect(
     newEdge: EdgeStruct,
     newNode: NodeStruct,
     parentNode: NodeStruct

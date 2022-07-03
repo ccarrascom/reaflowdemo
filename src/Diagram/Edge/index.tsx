@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import type {EdgeStruct} from '../model';
+import type {EdgeStruct} from '../../model';
 import {
   Label,
   Edge as ReaflowEdge,
@@ -9,7 +9,7 @@ import {
 import * as css from './style';
 
 interface EdgeProps extends Partial<ReaflowEdgeProps> {
-  onEdgeClick?(edge: EdgeStruct): void;
+  onEdgeClick(edge: EdgeStruct): void;
 }
 
 export const Edge: FC<EdgeProps> = ({onEdgeClick, ...props}) => {

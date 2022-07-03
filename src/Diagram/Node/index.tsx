@@ -27,7 +27,7 @@ const NodeStats: FC<NodeStatsProps> = ({showStats, stats}) =>
 
 interface NodeContentProps extends NodeStruct {
   selected?: boolean;
-  onClick?(): void;
+  onClick?: ()=>void;
 }
 
 const NodeContent: FC<NodeContentProps> = ({id, selected, onClick, data}) => {
@@ -64,8 +64,8 @@ interface NodeChildProps {
   edges?: EdgeStruct[];
   disabled?: boolean;
   selected?: boolean;
-  onAddClick?(node: NodeStruct): void;
-  onNodeClick?(node: NodeStruct): void;
+  onAddClick(node: NodeStruct): void;
+  onNodeClick(node: NodeStruct): void;
 }
 
 const renderNodeContent: FC<NodeChildProps> = ({
@@ -104,8 +104,8 @@ const renderNodeContent: FC<NodeChildProps> = ({
 
 interface NodeProps extends Partial<ReaflowNodeProps> {
   selectedId?: string;
-  onAddClick?(node: NodeStruct): void;
-  onNodeClick?(node: NodeStruct): void;
+  onAddClick(node: NodeStruct): void;
+  onNodeClick(node: NodeStruct): void;
 }
 
 export const Node: FC<NodeProps> = ({

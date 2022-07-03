@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
 import {FC, useCallback} from 'react';
 import {Card, Col, Space, Row} from 'antd';
 import {nanoid} from 'nanoid';
@@ -16,7 +14,7 @@ import * as css from './style';
 
 interface NodeListProps {
   selectedNode?: NodeStruct;
-  onNodeSelect?(
+  onNodeSelect(
     newEdge: EdgeStruct,
     newNode: NodeStruct,
     parentNode: NodeStruct

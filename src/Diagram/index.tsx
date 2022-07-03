@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
 import {useCallback, useRef, FC} from 'react';
 import {
   Canvas,
@@ -134,7 +132,7 @@ const Controls: FC<ControlsProps> = ({onZoomIn, onZoomOut, onZoomReset}) => (
 interface ControlProps {
   title: string;
   icon: JSX.Element;
-  onClick?(): void;
+  onClick?: ()=>void;
 }
 
 const Control: FC<ControlProps> = ({title, icon, onClick}) => (
