@@ -78,7 +78,6 @@ export const Diagram: FC<DiagramProps> = ({
       <div className={css.Canvas}>
         <Canvas
           fit
-          center
           pannable
           zoomable
           animated
