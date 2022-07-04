@@ -78,7 +78,7 @@ export const Diagram: FC<DiagramProps> = ({
       <div className={css.Canvas}>
         <Canvas
           fit
-          pannable
+          pannable={true}
           zoomable
           animated
           maxZoom={0.2}
@@ -98,6 +98,8 @@ export const Diagram: FC<DiagramProps> = ({
             />
           }
           edge={<Edge onEdgeClick={onEdgeClick} />}
+          onCanvasClick={(e)=>{console.log(e);
+          }}
         />
       </div>
     </div>
